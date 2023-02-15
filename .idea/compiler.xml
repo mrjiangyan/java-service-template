@@ -13,11 +13,14 @@
         <module name="jeecg-system-local-api" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="jeecg-boot-parent" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="jeecg-boot-base-core" options="-parameters" />
-      <module name="jeecg-system-api" options="-parameters" />
+      <module name="jeecg-system-api" options="" />
       <module name="jeecg-system-biz" options="-parameters" />
       <module name="jeecg-system-cloud-api" options="-parameters" />
       <module name="jeecg-system-local-api" options="-parameters" />
