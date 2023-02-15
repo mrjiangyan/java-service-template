@@ -358,13 +358,6 @@ public class SysDictServiceImpl extends ServiceImpl<SysDictMapper, SysDict> impl
 	}
 
 	@Override
-	public List<DictModel> queryDictTablePageList(DictQuery query, int pageSize, int pageNo) {
-		Page page = new Page(pageNo,pageSize,false);
-		Page<DictModel> pageList = baseMapper.queryDictTablePageList(page, query);
-		return pageList.getRecords();
-	}
-
-	@Override
 	public List<DictModel> getDictItems(String dictCode) {
 		List<DictModel> ls;
 		if (dictCode.contains(SymbolConstant.COMMA)) {

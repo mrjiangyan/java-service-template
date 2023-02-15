@@ -226,15 +226,6 @@ public interface ISysDictService extends IService<SysDict> {
 	 */
     List<SysDict> queryDeleteList();
 
-	/**
-	 * 分页查询
-	 * @param query
-	 * @param pageSize
-	 * @param pageNo
-	 * @return
-	 */
-	@Deprecated
-    List<DictModel> queryDictTablePageList(DictQuery query, int pageSize, int pageNo);
 
     /**
      * 获取字典数据

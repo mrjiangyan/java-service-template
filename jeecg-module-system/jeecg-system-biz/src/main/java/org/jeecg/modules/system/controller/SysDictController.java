@@ -326,28 +326,6 @@ public class SysDictController {
 		return result;
 	}
 
-	/**
-	 * 【APP接口】根据字典配置查询表字典数据（目前暂未找到调用的地方）
-	 * @param query
-	 * @param pageNo
-	 * @param pageSize
-	 * @return
-	 */
-	@Deprecated
-	@GetMapping("/queryTableData")
-	public Result<List<DictModel>> queryTableData(DictQuery query,
-												  @RequestParam(name = "pageNo", defaultValue = "1") Integer pageNo,
-												  @RequestParam(name = "pageSize", defaultValue = "10") Integer pageSize,
-												  @RequestParam(value = "sign",required = false) String sign,HttpServletRequest request){
-		Result<List<DictModel>> res = new Result<>();
-		// SQL注入漏洞 sign签名校验
-		String dictCode = query.getTable()+","+query.getText()+","+query.getCode();
-        SqlInjectionUtil.filterContent(dictCode);
-		List<DictModel> ls = this.sysDictService.queryDictTablePageList(query,pageSize,pageNo);
-		res.setResult(ls);
-		res.setSuccess(true);
-		return res;
-	}
 
 	/**
 	 * @功能：新增

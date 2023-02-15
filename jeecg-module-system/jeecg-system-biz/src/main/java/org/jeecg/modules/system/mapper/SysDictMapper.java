@@ -220,16 +220,6 @@ public interface SysDictMapper extends BaseMapper<SysDict> {
 
 
 	/**
-	 * 分页查询字典表数据
-	 * @param page
-	 * @param query
-	 * @return
-	 */
-	@Deprecated
-    Page<DictModel> queryDictTablePageList(Page page, @Param("query") DictQuery query);
-
-
-	/**
 	 * 查询 字典表数据 支持查询条件 分页
 	 * @param page
 	 * @param table
