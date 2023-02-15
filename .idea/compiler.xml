@@ -19,6 +19,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="boot-parent" options="" />
       <module name="jeecg-boot-base-core" options="-parameters" />
       <module name="jeecg-system-api" options="" />
       <module name="jeecg-system-biz" options="-parameters" />
