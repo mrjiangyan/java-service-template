@@ -48,7 +48,7 @@
     <log4j2.version>2.17.0</log4j2.version>
     <jjwt.version>0.9.1</jjwt.version>
     <jjwt-api.version>0.11.5</jjwt-api.version>
-
+    <inf-bom.version>2023.2.11.1</inf-bom.version>
   </properties>
 
   <modules>
@@ -90,16 +90,24 @@
 
   <dependencies>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>test</scope>
+      <groupId>com.touchbiz</groupId>
+      <artifactId>inf-bom</artifactId>
+      <version>${inf-bom.version}</version>
+      <type>pom</type>
+      <scope>import</scope>
     </dependency>
+
+<!--    <dependency>-->
+<!--      <groupId>junit</groupId>-->
+<!--      <artifactId>junit</artifactId>-->
+<!--      <scope>test</scope>-->
+<!--    </dependency>-->
     <!-- Lombok -->
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <version>${lombok.version}</version>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>org.projectlombok</groupId>-->
+<!--      <artifactId>lombok</artifactId>-->
+<!--      <version>${lombok.version}</version>-->
+<!--    </dependency>-->
     <!-- json -->
     <dependency>
       <groupId>com.alibaba</groupId>
@@ -370,42 +378,4 @@
       <url>http://maven.jeecg.com:8090/nexus/content/repositories/snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
-
-  <!-- 环境 -->
-  <profiles>
-    <!-- 开发 -->
-    <profile>
-      <id>dev</id>
-      <activation>
-        <!--默认激活配置-->
-        <activeByDefault>true</activeByDefault>
-      </activation>
-      <properties>
-        <!--当前环境-->
-        <profile.name>dev</profile.name>
-        <!--Nacos服务地址-->
-        <config.server-addr>jeecg-boot-nacos:8848</config.server-addr>
-      </properties>
-    </profile>
-    <!-- 测试 -->
-    <profile>
-      <id>test</id>
-      <properties>
-        <!--当前环境-->
-        <profile.name>test</profile.name>
-        <!--Nacos服务地址-->
-        <config.server-addr>jeecg-boot-nacos:8848</config.server-addr>
-      </properties>
-    </profile>
-    <!-- 生产 -->
-    <profile>
-      <id>prod</id>
-      <properties>
-        <!--当前环境-->
-        <profile.name>prod</profile.name>
-        <!--Nacos服务地址-->
-        <config.server-addr>jeecg-boot-nacos:8848</config.server-addr>
-      </properties>
-    </profile>
-  </profiles>
 </project>
