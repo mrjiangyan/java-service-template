@@ -1,0 +1,4 @@
+D:\start\backend-service\jeecg-module-system\jeecg-system-api\jeecg-system-cloud-api\src\main\java\org\jeecg\config\FeignConfig.java
+D:\start\backend-service\jeecg-module-system\jeecg-system-api\jeecg-system-cloud-api\src\main\java\org\jeecg\common\system\api\fallback\SysBaseAPIFallback.java
+D:\start\backend-service\jeecg-module-system\jeecg-system-api\jeecg-system-cloud-api\src\main\java\org\jeecg\common\system\api\factory\SysBaseAPIFallbackFactory.java
+D:\start\backend-service\jeecg-module-system\jeecg-system-api\jeecg-system-cloud-api\src\main\java\org\jeecg\common\system\api\ISysBaseAPI.java

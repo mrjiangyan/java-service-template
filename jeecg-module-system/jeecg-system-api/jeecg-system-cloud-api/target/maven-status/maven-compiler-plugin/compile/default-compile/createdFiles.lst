@@ -1,0 +1,3 @@
+org\jeecg\common\system\api\factory\SysBaseAPIFallbackFactory.class
+org\jeecg\common\system\api\ISysBaseAPI.class
+org\jeecg\common\system\api\fallback\SysBaseAPIFallback.class
