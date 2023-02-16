@@ -2,10 +2,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jeecgframework.boot</groupId>
-  <artifactId>jeecg-boot-parent</artifactId>
+  <artifactId>boot-parent</artifactId>
   <version>3.4.4</version>
   <packaging>pom</packaging>
-  <name>JEECG BOOT ${project.version}</name>
+  <name>BOOT ${project.version}</name>
 
   <parent>
     <groupId>org.springframework.boot</groupId>
@@ -52,8 +52,8 @@
   </properties>
 
   <modules>
-    <module>jeecg-boot-base-core</module>
-    <module>jeecg-module-system</module>
+    <module>boot-base-core</module>
+    <module>module-system</module>
 
   </modules>
 
@@ -137,7 +137,7 @@
       <!-- system 模块-->
       <dependency>
         <groupId>org.jeecgframework.boot</groupId>
-        <artifactId>jeecg-system-biz</artifactId>
+        <artifactId>system-biz</artifactId>
         <version>${jeecgboot.version}</version>
       </dependency>
 
@@ -150,26 +150,26 @@
       <!-- jeecg core -->
       <dependency>
         <groupId>org.jeecgframework.boot</groupId>
-        <artifactId>jeecg-boot-base-core</artifactId>
+        <artifactId>boot-base-core</artifactId>
         <version>${jeecgboot.version}</version>
       </dependency>
       <!-- system 单体 api -->
       <dependency>
         <groupId>org.jeecgframework.boot</groupId>
-        <artifactId>jeecg-system-local-api</artifactId>
+        <artifactId>system-local-api</artifactId>
         <version>${jeecgboot.version}</version>
       </dependency>
       <!-- system 微服务 api -->
 <!--      <dependency>-->
 <!--        <groupId>org.jeecgframework.boot</groupId>-->
-<!--        <artifactId>jeecg-system-cloud-api</artifactId>-->
+<!--        <artifactId>system-cloud-api</artifactId>-->
 <!--        <version>${jeecgboot.version}</version>-->
 <!--      </dependency>-->
 
       <!--微服务启动依赖-->
 <!--      <dependency>-->
 <!--        <groupId>org.jeecgframework.boot</groupId>-->
-<!--        <artifactId>jeecg-boot-starter-cloud</artifactId>-->
+<!--        <artifactId>boot-starter-cloud</artifactId>-->
 <!--        <version>${jeecgboot.version}</version>-->
 <!--      </dependency>-->
       <!--xxl-job定时任务-->
