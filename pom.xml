@@ -19,21 +19,13 @@
     <java.version>17</java.version>
     <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <lombok.version>1.18.24</lombok.version>
     <!-- 微服务 -->
     <spring-cloud.version>2021.0.3</spring-cloud.version>
     <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
 
     <fastjson.version>1.2.83</fastjson.version>
     <knife4j-spring-boot-starter.version>3.0.3</knife4j-spring-boot-starter.version>
-    <!-- 数据库驱动 -->
-    <mysql-connector-java.version>8.0.27</mysql-connector-java.version>
     <guava.version>29.0-jre</guava.version>
-
-    <!-- 持久层 -->
-    <mybatis-plus.version>3.5.1</mybatis-plus.version>
-    <dynamic-datasource-spring-boot-starter.version>3.2.0</dynamic-datasource-spring-boot-starter.version>
-    <druid.version>1.1.22</druid.version>
 
     <commons.version>2.6</commons.version>
     <!-- shiro -->
@@ -89,52 +81,7 @@
 
 
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <!-- Lombok -->
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <version>${lombok.version}</version>
-    </dependency>
-    <!-- json -->
-    <dependency>
-      <groupId>com.alibaba</groupId>
-      <artifactId>fastjson</artifactId>
-      <version>${fastjson.version}</version>
-    </dependency>
-  </dependencies>
-
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>com.touchbiz</groupId>
-        <artifactId>inf-bom</artifactId>
-        <version>${inf-bom.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <!-- spring-cloud-->
-      <dependency>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-dependencies</artifactId>
-        <version>${spring-cloud.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <!-- spring-cloud-alibaba -->
-      <dependency>
-        <groupId>com.alibaba.cloud</groupId>
-        <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-        <version>${spring-cloud-alibaba.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-
-      <!-- system 模块-->
+            <!-- system 模块-->
       <dependency>
         <groupId>com.touchbiz.boot</groupId>
         <artifactId>system-biz</artifactId>
@@ -234,6 +181,51 @@
 <!--          </exclusion>-->
 <!--        </exclusions>-->
 <!--      </dependency>-->
+           
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <!-- Lombok -->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>${lombok.version}</version>
+    </dependency>
+    <!-- json -->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>${fastjson.version}</version>
+    </dependency>
+  </dependencies>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.touchbiz</groupId>
+        <artifactId>inf-bom</artifactId>
+        <version>${inf-bom.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <!-- spring-cloud-->
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${spring-cloud.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <!-- spring-cloud-alibaba -->
+      <dependency>
+        <groupId>com.alibaba.cloud</groupId>
+        <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+        <version>${spring-cloud-alibaba.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
