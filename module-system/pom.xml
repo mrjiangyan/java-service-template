@@ -3,24 +3,20 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>jeecg-module-system</artifactId>
+        <artifactId>boot-parent</artifactId>
         <groupId>org.jeecgframework.boot</groupId>
         <version>3.4.4</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>jeecg-system-api</artifactId>
+    <artifactId>module-system</artifactId>
     <packaging>pom</packaging>
 
     <modules>
-        <module>jeecg-system-local-api</module>
-        <module>jeecg-system-cloud-api</module>
+        <module>system-api</module>
+        <module>system-biz</module>
+        <module>system-start</module>
     </modules>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.jeecgframework.boot</groupId>
-            <artifactId>jeecg-boot-base-core</artifactId>
-        </dependency>
-    </dependencies>
+
 </project>
