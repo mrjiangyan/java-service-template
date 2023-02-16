@@ -2,7 +2,7 @@
 		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<parent>
-		<groupId>org.jeecgframework.boot</groupId>
+		<groupId>com.touchbiz.boot</groupId>
 		<artifactId>module-system</artifactId>
 		<version>3.4.4</version>
 	</parent>
@@ -11,19 +11,17 @@
 	<artifactId>system-biz</artifactId>
 
 	<dependencies>
-
     <!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-api -->
-    <dependency>
-      <groupId>io.jsonwebtoken</groupId>
-      <artifactId>jjwt-api</artifactId>
-      <version>${jjwt-api.version}</version>
-    </dependency>
-
-    <dependency>
-			<groupId>org.jeecgframework.boot</groupId>
-			<artifactId>system-local-api</artifactId>
+		<dependency>
+		  	<groupId>io.jsonwebtoken</groupId>
+		  	<artifactId>jjwt-api</artifactId>
+		  	<version>${jjwt-api.version}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>com.touchbiz.boot</groupId>
+			<artifactId>system-local-api</artifactId>
+		</dependency>
 	</dependencies>
 	
 </project>

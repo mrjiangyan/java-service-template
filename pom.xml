@@ -1,7 +1,7 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.jeecgframework.boot</groupId>
+  <groupId>com.touchbiz.boot</groupId>
   <artifactId>boot-parent</artifactId>
   <version>3.4.4</version>
   <packaging>pom</packaging>
@@ -89,17 +89,17 @@
 
 
   <dependencies>
-<!--    <dependency>-->
-<!--      <groupId>junit</groupId>-->
-<!--      <artifactId>junit</artifactId>-->
-<!--      <scope>test</scope>-->
-<!--    </dependency>-->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
     <!-- Lombok -->
-<!--    <dependency>-->
-<!--      <groupId>org.projectlombok</groupId>-->
-<!--      <artifactId>lombok</artifactId>-->
-<!--      <version>${lombok.version}</version>-->
-<!--    </dependency>-->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>${lombok.version}</version>
+    </dependency>
     <!-- json -->
     <dependency>
       <groupId>com.alibaba</groupId>
@@ -136,7 +136,7 @@
 
       <!-- system 模块-->
       <dependency>
-        <groupId>org.jeecgframework.boot</groupId>
+        <groupId>com.touchbiz.boot</groupId>
         <artifactId>system-biz</artifactId>
         <version>${jeecgboot.version}</version>
       </dependency>
@@ -149,44 +149,44 @@
       </dependency>
       <!-- jeecg core -->
       <dependency>
-        <groupId>org.jeecgframework.boot</groupId>
+        <groupId>com.touchbiz.boot</groupId>
         <artifactId>boot-base-core</artifactId>
         <version>${jeecgboot.version}</version>
       </dependency>
       <!-- system 单体 api -->
       <dependency>
-        <groupId>org.jeecgframework.boot</groupId>
+        <groupId>com.touchbiz.boot</groupId>
         <artifactId>system-local-api</artifactId>
         <version>${jeecgboot.version}</version>
       </dependency>
       <!-- system 微服务 api -->
 <!--      <dependency>-->
-<!--        <groupId>org.jeecgframework.boot</groupId>-->
+<!--        <groupId>com.touchbiz.boot</groupId>-->
 <!--        <artifactId>system-cloud-api</artifactId>-->
 <!--        <version>${jeecgboot.version}</version>-->
 <!--      </dependency>-->
 
       <!--微服务启动依赖-->
 <!--      <dependency>-->
-<!--        <groupId>org.jeecgframework.boot</groupId>-->
+<!--        <groupId>com.touchbiz.boot</groupId>-->
 <!--        <artifactId>boot-starter-cloud</artifactId>-->
 <!--        <version>${jeecgboot.version}</version>-->
 <!--      </dependency>-->
       <!--xxl-job定时任务-->
 <!--      <dependency>-->
-<!--        <groupId>org.jeecgframework.boot</groupId>-->
+<!--        <groupId>com.touchbiz.boot</groupId>-->
 <!--        <artifactId>jeecg-boot-starter-job</artifactId>-->
 <!--        <version>${jeecgboot.version}</version>-->
 <!--      </dependency>-->
       <!--redis分布式锁-->
 <!--      <dependency>-->
-<!--        <groupId>org.jeecgframework.boot</groupId>-->
+<!--        <groupId>com.touchbiz.boot</groupId>-->
 <!--        <artifactId>jeecg-boot-starter-lock</artifactId>-->
 <!--        <version>${jeecgboot.version}</version>-->
 <!--      </dependency>-->
       <!--rabbitmq消息队列-->
 <!--      <dependency>-->
-<!--        <groupId>org.jeecgframework.boot</groupId>-->
+<!--        <groupId>com.touchbiz.boot</groupId>-->
 <!--        <artifactId>jeecg-boot-starter-rabbitmq</artifactId>-->
 <!--        <version>${jeecgboot.version}</version>-->
 <!--      </dependency>-->

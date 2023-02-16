@@ -8,7 +8,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.jeecg.common.constant.DataBaseConstant;
 import org.jeecg.common.constant.SymbolConstant;
-import org.jeecgframework.codegenerate.generate.util.SimpleFormat;
 
 import java.io.StringWriter;
 import java.util.Map;
@@ -94,7 +93,7 @@ public class FreemarkerParseFactory {
             if (paras.containsKey(MINI_DAO_FORMAT)) {
                 throw new RuntimeException("DaoFormat 是 minidao 保留关键字，不允许使用 ，请更改参数定义！");
             }
-            paras.put(MINI_DAO_FORMAT, new SimpleFormat());
+            paras.put(MINI_DAO_FORMAT, null);
             mytpl.process(paras, swriter);
             String sql = getSqlText(swriter.toString());
             paras.remove(MINI_DAO_FORMAT);
@@ -127,7 +126,7 @@ public class FreemarkerParseFactory {
             if (paras.containsKey(MINI_DAO_FORMAT)) {
                 throw new RuntimeException("DaoFormat 是 minidao 保留关键字，不允许使用 ，请更改参数定义！");
             }
-            paras.put(MINI_DAO_FORMAT, new SimpleFormat());
+            paras.put(MINI_DAO_FORMAT, null);
             mytpl.process(paras, swriter);
             String sql = getSqlText(swriter.toString());
             paras.remove(MINI_DAO_FORMAT);

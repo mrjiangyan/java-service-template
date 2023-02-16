@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>module-system</artifactId>
-        <groupId>org.jeecgframework.boot</groupId>
+        <groupId>com.touchbiz.boot</groupId>
         <version>3.4.4</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -14,16 +14,16 @@
     <dependencies>
         <!-- SYSTEM 系统管理模块 -->
         <dependency>
-            <groupId>org.jeecgframework.boot</groupId>
+            <groupId>com.touchbiz.boot</groupId>
             <artifactId>system-biz</artifactId>
             <version>${jeecgboot.version}</version>
         </dependency>
 
-      <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-        <scope>test</scope>
-      </dependency>
+<!--      <dependency>-->
+<!--        <groupId>junit</groupId>-->
+<!--        <artifactId>junit</artifactId>-->
+<!--        <scope>test</scope>-->
+<!--      </dependency>-->
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-test</artifactId>
