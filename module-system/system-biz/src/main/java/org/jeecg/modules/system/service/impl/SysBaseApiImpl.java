@@ -24,7 +24,6 @@ import org.jeecg.common.system.query.QueryGenerator;
 import org.jeecg.common.system.vo.*;
 import org.jeecg.common.util.SysAnnmentTypeEnum;
 import org.jeecg.common.util.YouBianCodeUtil;
-import org.jeecg.common.util.dynamic.db.FreemarkerParseFactory;
 import org.jeecg.common.util.oConvertUtils;
 import org.jeecg.modules.message.entity.SysMessageTemplate;
 import org.jeecg.modules.message.handle.impl.DdSendMsgHandle;
@@ -1184,7 +1183,7 @@ public class SysBaseApiImpl implements ISysBaseAPI {
 		if(oConvertUtils.isNotEmpty(templateCode)){
 			String content = getTemplateContent(templateCode);
 			if(oConvertUtils.isNotEmpty(content) && null!=message.getData()){
-				content = FreemarkerParseFactory.parseTemplateContent(content, message.getData());
+				//content = FreemarkerParseFactory.parseTemplateContent(content, message.getData());
 			}
 			message.setContent(content);
 		}

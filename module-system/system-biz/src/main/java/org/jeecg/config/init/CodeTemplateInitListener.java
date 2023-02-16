@@ -57,7 +57,7 @@ public class CodeTemplateInitListener implements ApplicationListener<Application
             }
             if (!FileUtil.exist(createFilePath)) {
                 log.debug("create file codeTemplate = " + createFilePath);
-                FileUtil.writeString(IOUtils.toString(url, StandardCharsets.UTF_8), createFilePath, "UTF-8");
+                FileUtil.writeString(IOUtils.toString(url, String.valueOf(StandardCharsets.UTF_8)), createFilePath, "UTF-8");
             }
         }
     }

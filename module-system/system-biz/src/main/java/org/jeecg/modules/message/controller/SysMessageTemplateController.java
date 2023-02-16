@@ -148,26 +148,26 @@ public class SysMessageTemplateController extends JeecgController<SysMessageTemp
 	/**
 	 * 发送消息
 	 */
-	@PostMapping(value = "/sendMsg")
-	public Result<SysMessageTemplate> sendMessage(@RequestBody MsgParams msgParams) {
-		Result<SysMessageTemplate> result = new Result<>();
-		try {
-			MessageDTO md = new MessageDTO();
-			md.setToAll(false);
-			md.setTitle("消息发送测试");
-			md.setTemplateCode(msgParams.getTemplateCode());
-			md.setToUser(msgParams.getReceiver());
-			md.setType(msgParams.getMsgType());
-			String testData = msgParams.getTestData();
-			if(oConvertUtils.isNotEmpty(testData)){
-				Map<String, Object> data = JSON.parseObject(testData, Map.class);
-				md.setData(data);
-			}
-			sysBaseApi.sendTemplateMessage(md);
-			return result.success("消息发送成功！");
-		} catch (Exception e) {
-			log.error("发送消息出错:{}", e.getMessage());
-			return result.error500("发送消息出错！");
-		}
-	}
+//	@PostMapping(value = "/sendMsg")
+//	public Result<SysMessageTemplate> sendMessage(@RequestBody MsgParams msgParams) {
+//		Result<SysMessageTemplate> result = new Result<>();
+//		try {
+//			MessageDTO md = new MessageDTO();
+//			md.setToAll(false);
+//			md.setTitle("消息发送测试");
+//			md.setTemplateCode(msgParams.getTemplateCode());
+//			md.setToUser(msgParams.getReceiver());
+//			md.setType(msgParams.getMsgType());
+//			String testData = msgParams.getTestData();
+//			if(oConvertUtils.isNotEmpty(testData)){
+//				Map<String, Object> data = JSON.parseObject(testData, Map.class);
+//				md.setData(data);
+//			}
+//			sysBaseApi.sendTemplateMessage(md);
+//			return result.success("消息发送成功！");
+//		} catch (Exception e) {
+//			log.error("发送消息出错:{}", e.getMessage());
+//			return result.error500("发送消息出错！");
+//		}
+//	}
 }

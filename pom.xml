@@ -80,8 +80,63 @@
   </repositories>
 
 
-  <dependencies>
-            <!-- system 模块-->
+    <dependencies>
+      <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>okhttp</artifactId>
+        <version>4.4.1</version>
+      </dependency>
+      <!--minio-->
+      <dependency>
+        <groupId>io.minio</groupId>
+        <artifactId>minio</artifactId>
+        <version>${minio.version}</version>
+        <exclusions>
+          <exclusion>
+            <artifactId>okio</artifactId>
+            <groupId>com.squareup.okio</groupId>
+          </exclusion>
+          <exclusion>
+            <artifactId>okhttp</artifactId>
+            <groupId>com.squareup.okhttp3</groupId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+      <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <scope>test</scope>
+      </dependency>
+    <!-- Lombok -->
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+      </dependency>
+    <!-- json -->
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>fastjson</artifactId>
+       <version>${fastjson.version}</version>
+      </dependency>
+
+<!--      <dependency>-->
+<!--        <groupId>com.touchbiz.starter</groupId>-->
+<!--        <artifactId>webflux-starter</artifactId>-->
+<!--      </dependency>-->
+
+<!--      <dependency>-->
+<!--        <groupId>com.touchbiz.starter</groupId>-->
+<!--        <artifactId>cache-starter</artifactId>-->
+<!--      </dependency>-->
+      <dependency>
+        <groupId>com.touchbiz.starter</groupId>
+        <artifactId>db-starter</artifactId>
+      </dependency>
+    </dependencies>
+
+  <dependencyManagement>
+    <dependencies>
+      <!-- system 模块-->
       <dependency>
         <groupId>com.touchbiz.boot</groupId>
         <artifactId>system-biz</artifactId>
@@ -106,98 +161,6 @@
         <artifactId>system-local-api</artifactId>
         <version>${jeecgboot.version}</version>
       </dependency>
-      <!-- system 微服务 api -->
-<!--      <dependency>-->
-<!--        <groupId>com.touchbiz.boot</groupId>-->
-<!--        <artifactId>system-cloud-api</artifactId>-->
-<!--        <version>${jeecgboot.version}</version>-->
-<!--      </dependency>-->
-
-      <!--微服务启动依赖-->
-<!--      <dependency>-->
-<!--        <groupId>com.touchbiz.boot</groupId>-->
-<!--        <artifactId>boot-starter-cloud</artifactId>-->
-<!--        <version>${jeecgboot.version}</version>-->
-<!--      </dependency>-->
-      <!--xxl-job定时任务-->
-<!--      <dependency>-->
-<!--        <groupId>com.touchbiz.boot</groupId>-->
-<!--        <artifactId>jeecg-boot-starter-job</artifactId>-->
-<!--        <version>${jeecgboot.version}</version>-->
-<!--      </dependency>-->
-      <!--redis分布式锁-->
-<!--      <dependency>-->
-<!--        <groupId>com.touchbiz.boot</groupId>-->
-<!--        <artifactId>jeecg-boot-starter-lock</artifactId>-->
-<!--        <version>${jeecgboot.version}</version>-->
-<!--      </dependency>-->
-      <!--rabbitmq消息队列-->
-<!--      <dependency>-->
-<!--        <groupId>com.touchbiz.boot</groupId>-->
-<!--        <artifactId>jeecg-boot-starter-rabbitmq</artifactId>-->
-<!--        <version>${jeecgboot.version}</version>-->
-<!--      </dependency>-->
-
-
-      <dependency>
-        <groupId>com.squareup.okhttp3</groupId>
-        <artifactId>okhttp</artifactId>
-        <version>4.4.1</version>
-      </dependency>
-      <!--minio-->
-      <dependency>
-        <groupId>io.minio</groupId>
-        <artifactId>minio</artifactId>
-        <version>${minio.version}</version>
-        <exclusions>
-          <exclusion>
-            <artifactId>okio</artifactId>
-            <groupId>com.squareup.okio</groupId>
-          </exclusion>
-          <exclusion>
-            <artifactId>okhttp</artifactId>
-            <groupId>com.squareup.okhttp3</groupId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <!-- 企业微信和钉钉 api -->
-<!--      <dependency>-->
-<!--        <groupId>org.jeecgframework</groupId>-->
-<!--        <artifactId>jeewx-api</artifactId>-->
-<!--        <version>1.4.8</version>-->
-<!--        <exclusions>-->
-<!--          <exclusion>-->
-<!--            <artifactId>commons-beanutils</artifactId>-->
-<!--            <groupId>commons-beanutils</groupId>-->
-<!--          </exclusion>-->
-<!--          <exclusion>-->
-<!--            <artifactId>commons-lang</artifactId>-->
-<!--            <groupId>commons-lang</groupId>-->
-<!--          </exclusion>-->
-<!--        </exclusions>-->
-<!--      </dependency>-->
-           
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <!-- Lombok -->
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <version>${lombok.version}</version>
-    </dependency>
-    <!-- json -->
-    <dependency>
-      <groupId>com.alibaba</groupId>
-      <artifactId>fastjson</artifactId>
-      <version>${fastjson.version}</version>
-    </dependency>
-  </dependencies>
-
-  <dependencyManagement>
-    <dependencies>
       <dependency>
         <groupId>com.touchbiz</groupId>
         <artifactId>inf-bom</artifactId>
@@ -269,16 +232,16 @@
     </resources>
   </build>
 
-  <distributionManagement>
-    <repository>
-      <id>jeecg</id>
-      <name>jeecg Repository</name>
-      <url>http://maven.jeecg.com:8090/nexus/content/repositories/jeecg</url>
-    </repository>
-    <snapshotRepository>
-      <id>jeecg-snapshots</id>
-      <name>jeecg Snapshot Repository</name>
-      <url>http://maven.jeecg.com:8090/nexus/content/repositories/snapshots/</url>
-    </snapshotRepository>
-  </distributionManagement>
+<!--  <distributionManagement>-->
+<!--    <repository>-->
+<!--      <id>jeecg</id>-->
+<!--      <name>jeecg Repository</name>-->
+<!--      <url>http://maven.jeecg.com:8090/nexus/content/repositories/jeecg</url>-->
+<!--    </repository>-->
+<!--    <snapshotRepository>-->
+<!--      <id>jeecg-snapshots</id>-->
+<!--      <name>jeecg Snapshot Repository</name>-->
+<!--      <url>http://maven.jeecg.com:8090/nexus/content/repositories/snapshots/</url>-->
+<!--    </snapshotRepository>-->
+<!--  </distributionManagement>-->
 </project>

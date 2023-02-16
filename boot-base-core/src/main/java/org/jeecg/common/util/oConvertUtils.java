@@ -662,7 +662,7 @@ public class oConvertUtils {
 		try {
 			//换个写法，解决springboot读取jar包中文件的问题
 			InputStream stream = oConvertUtils.class.getClassLoader().getResourceAsStream(url.replace("classpath:", ""));
-			json = IOUtils.toString(stream, StandardCharsets.UTF_8);
+			json = IOUtils.toString(stream, String.valueOf(StandardCharsets.UTF_8));
 		} catch (IOException e) {
 			log.error(e.getMessage(),e);
 		}

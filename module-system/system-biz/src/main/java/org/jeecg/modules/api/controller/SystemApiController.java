@@ -648,10 +648,10 @@ public class SystemApiController {
      * 发送模板信息
      * @param message
      */
-    @PostMapping("/sendTemplateMessage")
-    public void sendTemplateMessage(@RequestBody MessageDTO message){
-        sysBaseApi.sendTemplateMessage(message);
-    }
+//    @PostMapping("/sendTemplateMessage")
+//    public void sendTemplateMessage(@RequestBody MessageDTO message){
+//        sysBaseApi.sendTemplateMessage(message);
+//    }
 
     /**
      * 获取消息模板内容
