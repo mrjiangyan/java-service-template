@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(value = {"classpath:application.yml"}, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@ContextConfiguration(classes = JeecgSystemApplication.class)
+@ContextConfiguration(classes = SystemApplication.class)
 @ActiveProfiles(profiles = "dev")
 @AutoConfigureMockMvc
 @Transactional
